@@ -1,7 +1,10 @@
 package com.example.taskmanager.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class TaskRequest {
 
+    @NotBlank(message = "Task title is required")
     private String title;
 
     public String getTitle() {
